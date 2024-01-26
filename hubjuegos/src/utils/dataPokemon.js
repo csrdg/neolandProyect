@@ -7,7 +7,7 @@ let dataGlobal;
 export const dataPokemon = async () => {
   const rawData = [];
 
-  for (i = 0; i < 151; i++) {
+  for (let i = 1; i < 151; i++) {
     rawData.push(await getByIdPokemon(i));
   }
 
@@ -40,16 +40,17 @@ export const filterPokemon = (filterDataInputButton, donde) => {
             .toLowerCase()
             .includes(filterDataInputButton.toLowerCase())
         );
-      }
-      if (filterData.length === 0) {
-        const filterData = dataGlobal.pokemonData.filter((pokemon) =>
-          pokemon.type[1]?.type.name
-            .toLowerCase()
-            .includes(filterDataInputButton.toLowerCase())
-        );
-        Paginacion(filterData, 3);
-      } else {
-        Paginacion(filterData, 3);
+
+        if (filterData.length === 0) {
+          const filterData = dataGlobal.pokemonData.filter((pokemon) =>
+            pokemon.type[1]?.type.name
+              .toLowerCase()
+              .includes(filterDataInputButton.toLowerCase())
+          );
+          Paginacion(filterData, 3);
+        } else {
+          Paginacion(filterData, 3);
+        }
       }
 
       break;

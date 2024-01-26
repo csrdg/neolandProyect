@@ -2,8 +2,8 @@ import { filterPokemon } from "../../utils";
 import "./ButtonFilter.css";
 
 export const PrintButton = (types) => {
-  types.foreach((type) => {
-    const buttonType = `<button class="buttonFilter" ${type}">${type}</button>`;
+  types.forEach((type) => {
+    const buttonType = `<button class="buttonFilter ${type}">${type}</button>`;
     const containerFilter = document.getElementById("filterButton");
     containerFilter.innerHTML += buttonType;
   });
@@ -12,7 +12,7 @@ export const PrintButton = (types) => {
 };
 
 const addListeners = (types) => {
-  types.foreach((type) => {
+  types.forEach((type) => {
     const buttonType = document.querySelector(`.${type}`);
     buttonType.addEventListener("click", (e) => {
       filterPokemon(type, "type");

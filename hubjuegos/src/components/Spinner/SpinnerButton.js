@@ -11,5 +11,5 @@ const template = () =>
  `;
 
 export const PrintSpinner = () => {
-  document.getElementById("SpinnerButtonFilter").innerHTML = template();
+  document.getElementById("spinnerButtonFilter").innerHTML = template();
 };

@@ -2,6 +2,7 @@ import { getUserData, setUserData } from "../../global/state/globalstate";
 import "./CardPokemons.css";
 
 export const CardsPokemons = (data) => {
+  const appUser = getUserData();
   document.getElementById("galleryPokemon").innerHTML = "";
 
   data.map((pokemon) => {
@@ -22,7 +23,7 @@ export const CardsPokemons = (data) => {
 };
 
 const addListeners = (data) => {
-  const appUser = getUserData();
+  let appUser = getUserData();
 
   const spanAll = document.querySelectorAll("span");
   spanAll.forEach((span) => {
