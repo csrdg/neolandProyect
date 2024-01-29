@@ -23,12 +23,12 @@ const template = () => `
     </figure>
   </li>
   <li>
-    <figure>
+    <figure id="navigatePokeMatch">
       <img
         src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
-        alt="go to memory game"
+        alt="go to poke match"
       />
-      <h2>MEMORY GAME</h2>
+      <h2>POKE MATCH</h2>
     </figure>
   </li>
 </ul>
@@ -39,6 +39,10 @@ const addEventlisteners = () => {
   const navigatePokemon = document.getElementById("navigatePokemon");
   navigatePokemon.addEventListener("click", () => {
     initControler("Pokemon");
+  });
+  const navigatePokeMatch = document.getElementById("navigatePokeMatch");
+  navigatePokeMatch.addEventListener("click", () => {
+    initControler("PokeMatch");
   });
 };
 

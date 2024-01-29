@@ -14,7 +14,7 @@ let userData = localStorage.getItem(currentUser.name)
 
 const dataGlobal = {
   pokemon: [],
-  ricky: [],
+  pokeMatch: [],
 };
 
 export const setUser = (username) => {
@@ -31,6 +31,8 @@ export const setData = (data, page) => {
       dataGlobal.pokemon = data;
 
       break;
+    case "PokeMatchGame":
+      dataGlobal.pokeMatch = data;
 
     default:
       break;
@@ -42,6 +44,8 @@ export const getData = (page) => {
     case "Pokemon":
       return dataGlobal.pokemon;
     default:
+    case "PokeMatchGame":
+      return dataGlobal.pokeMatch;
       break;
   }
   return dataGlobal;

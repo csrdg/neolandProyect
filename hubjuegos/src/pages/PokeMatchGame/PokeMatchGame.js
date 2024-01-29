@@ -1,10 +1,16 @@
-import { initControler } from "../../utils";
-import "./PokeMatcGame.css";
+import { resetGame } from "../../components";
+import "./PokeMatchGame.css";
 
 const template = () => `
     <div id="PokeMatchGame">
-     <h2 id="titleGame">POKE MATCH</h2>
+     <h1 id="titleGame">POKE MATCH</h1>
      <div id="containerBoardGame"></div>
-     <button id="resertGame">RESET!</div>
+     <button id="btnReset">RESET!</div>
     </div>
 `;
+
+export const PrintPokeMatch = () => {
+  document.querySelector("main").innerHTML = template();
+
+  resetGame();
+};

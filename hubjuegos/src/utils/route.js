@@ -1,5 +1,10 @@
 import { getUser } from "../global/state/globalstate";
-import { Login, PrintPokemonPage, printTemplateDashboard } from "../pages";
+import {
+  Login,
+  PrintPokemonPage,
+  printTemplateDashboard,
+  PrintPokeMatch,
+} from "../pages";
 
 export const initControler = (pagesRender) => {
   switch (pagesRender) {
@@ -18,8 +23,8 @@ export const initControler = (pagesRender) => {
     case "Login":
       Login();
       break;
-    case "Memory":
-      "PrintMemoryPage()";
+    case "PokeMatch":
+      PrintPokeMatch();
       break;
   }
 };

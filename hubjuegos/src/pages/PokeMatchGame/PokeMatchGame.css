@@ -1,0 +1,22 @@
+
+#containerBoardGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  }
+
+
+
+  #btnReset {
+    font-size:18px;
+    background-color: #c62828;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
