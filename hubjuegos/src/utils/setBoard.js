@@ -1,28 +1,12 @@
-import { setData } from "../global/state/globalstate";
-import { getByIdPokemon } from "../services/pokemon.service";
+const pokeAPIBaseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 export const loadPokemon = async () => {
-  const randomIds = [];
+  const randomIds = new Set();
   while (randomIds.size < 8) {
     const randomNumber = Math.ceil(Math.random() * 151);
-    randomIds.push(randomNumber)(await getByIdPokemon(i));
+    randomIds.add(randomNumber);
   }
-  return dataMapGame(randomIds);
+  const pokePromises = [...randomIds].map((id) => fetch(pokeAPIBaseUrl + id));
+  const results = await Promise.all(pokePromises);
+  return await Promise.all(results.map((res) => res.json()));
 };
-
-const dataMapGame = (data) => {
-  const filterData = data.map((pokemon) => ({
-    name: pokemon.name,
-    image: pokemon.sprites.front_default,
-    type: pokemon.types,
-    id: pokemon.id,
-  }));
-};
-
-export const getInfoGAme = async () => {
-  console.log("actualizando info... 👌🔍");
-  const data = await loadPokemon();
-  setData(data, "PokeMatchGame");
-};
-
-getInfoGAme();
