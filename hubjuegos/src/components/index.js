@@ -5,3 +5,4 @@ export * from "./Spinner/Spinner";
 export * from "./Spinner/SpinnerButton";
 export * from "./ButtonFilter/ButtonFilter";
 export * from "./MatchBoard/MatchBoard";
+export * from "./ButtonLetras/ButtonLetras";

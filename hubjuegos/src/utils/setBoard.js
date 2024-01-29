@@ -1,3 +1,5 @@
+import { dataPokemon } from ".";
+
 const pokeAPIBaseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 export const loadPokemon = async () => {

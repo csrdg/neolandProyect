@@ -14,12 +14,12 @@ const template = () => `
     </figure>
   </li>
   <li>
-    <figure>
+    <figure id="navigateAhorcado">
       <img
         src="https://res.cloudinary.com/deck6wgqf/image/upload/v1706219449/dxohppd3kbiwepizqbye.png"
-        alt=" go to whos that pokemon game"
+        alt=" go to ahorcado"
       />
-      <h2>POKEMON GAME</h2>
+      <h2>NOT MY GAME</h2>
     </figure>
   </li>
   <li>
@@ -44,8 +44,11 @@ const addEventlisteners = () => {
   navigatePokeMatch.addEventListener("click", () => {
     initControler("PokeMatch");
   });
+  const navigateAhorcado = document.getElementById("navigateAhorcado");
+  navigateAhorcado.addEventListener("click", () => {
+    initControler("Ahorcado");
+  });
 };
-
 export const printTemplateDashboard = () => {
   document.querySelector("main").innerHTML = template();
   document.querySelector("nav").style.display = "flex";

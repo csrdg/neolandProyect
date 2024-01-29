@@ -4,6 +4,7 @@ import {
   PrintPokemonPage,
   printTemplateDashboard,
   PrintPokeMatch,
+  PrintAhorcado,
 } from "../pages";
 
 export const initControler = (pagesRender) => {
@@ -17,8 +18,8 @@ export const initControler = (pagesRender) => {
     case "Dashboard":
       printTemplateDashboard();
       break;
-    case "Topo":
-      "PrintTopoPage()";
+    case "Ahorcado":
+      PrintAhorcado();
       break;
     case "Login":
       Login();
