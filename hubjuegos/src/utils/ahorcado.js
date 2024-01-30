@@ -32,9 +32,9 @@ export const iniciar = (event) => {
 
   setPalabrita(palabras[valor_al_azar]);
 
-  const btn_letras = document.querySelector("#letras button");
   const cant_letras = getInfoAhorcado().palabrita.length;
 
+  const btn_letras = document.querySelectorAll("#letras button");
   for (let i = 0; i < btn_letras.length; i++) {
     btn_letras[i].disabled = false;
   }
@@ -58,7 +58,7 @@ export const click_letras = (event) => {
     if (letra == palabra[i]) {
       spans[i].innerHTML = letra;
       let aciertos = parseInt(getInfoAhorcado().cant_aciertos);
-      setAciertos(aciertos++);
+      setAciertos(aciertos + 1);
       acierto = true;
     }
   }

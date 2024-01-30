@@ -16,7 +16,7 @@ const template = () => `
   <li>
     <figure id="navigateAhorcado">
       <img
-        src="https://res.cloudinary.com/deck6wgqf/image/upload/v1706219449/dxohppd3kbiwepizqbye.png"
+        src="https://res.cloudinary.com/deck6wgqf/image/upload/v1706570052/hanging_death_sentence_capitol_punishment-512_jcptrt.png"
         alt=" go to ahorcado"
       />
       <h2>NOT MY GAME</h2>
@@ -25,7 +25,7 @@ const template = () => `
   <li>
     <figure id="navigatePokeMatch">
       <img
-        src="https://res.cloudinary.com/dq186ej4c/image/upload/v1689761735/6168776_kfna36.png"
+        src="https://res.cloudinary.com/deck6wgqf/image/upload/v1706568392/pngwing.com_qgelkn.png"
         alt="go to poke match"
       />
       <h2>POKE MATCH</h2>

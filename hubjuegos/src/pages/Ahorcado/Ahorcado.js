@@ -14,7 +14,6 @@ const template = () => `  <img id="imagen" src="img/img0.png" alt="Ahorcado" />
 </div>`;
 
 const addListeners = () => {
-  id;
   const btn = id("jugar");
   btn.addEventListener("click", iniciar);
 };
